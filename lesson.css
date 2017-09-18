@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+body {
+  margin:0;
+  padding:0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size:2.7rem;
+  padding-left:3rem;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size:2.4rem;
+  padding-left:3rem;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size:2rem;
+  padding-left:3rem;
+}
+
+section {
+  /* make it so high that only one section is shown at once */
+  min-height: 1200px;
+  padding: 0 3rem;
+}
+
+section h1 {
+  margin:0;
+  padding: 3rem;
+  margin: 0 -3rem;
+  font-weight:400;
+  background-color:#59ADC5;
+  color:#fff;
+  font-size:3.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+section h1 strong {
+  display:block;
+  color:#fff;
+  font-size:1.6rem;
+  font-weight:400;
+}
+
+section p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+
+section ul {
+  margin: 2rem 1rem 0 0;
+}
+
+section li {
+  font-size: 1.8rem;
+}
+
+section code {
+  border: 1px solid grey;
+  padding: 0.2rem 0.4rem;
+  background: #eee;
+  border-radius: 0.2rem;
+}
+
+.pull-right {
+  float: right;
+}
+
+img.pull-right {
+  float: right;
+  margin:2rem;
+}
+
+
+table {
+  margin:2rem 3rem;
+  border:0;
+  border-top:1px solid #bbb;
+  border-left:1px solid #eee;
+  width:90%;
+  border-collapse:collapse;
+}
+
+table td, th {
+  font-size: 1.3rem;
+  text-align:left;
+  padding:.5rem;
+}
+
+tr {
+  border-bottom:1px solid #bbb;
+}
+
+td,th {
+  border-right:1px solid #eee;
+}
+
+table.noborder td,
+table.noborder th,
+table.noborder,
+table.noborder tr {
+  border: 0;
+}
+
+xmp {
+  font-size: 1.8rem;
+  line-height: 2.0rem;
+}
+
+/* A component to mix text and code examples together */
+.fluent {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+
+.fluent .html-code, .fluent .css-code, .fluent .result {
+  padding: 0.5rem;
+  margin: 0.7rem 0;
+}
+
+.fluent .html-code {
+  border: 4px solid #ffc27980;
+  background: #f5eddb;
+}
+
+.fluent .css-code {
+  border: 4px solid #cc36;
+  background: #fcfcaa4d;
+}
+
+.fluent .result {
+  border: 4px solid #9bcd7a99;
+  background: #e0efd6;
+}
+
+.image {
+  margin:2rem 3rem;
+}
+
+.first {
+  background-image:url(img/class.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:0 0;
+}
