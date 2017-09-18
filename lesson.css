@@ -53,6 +53,10 @@ section p {
   line-height: 2.8rem;
 }
 
+section p img {
+  width: 100%;
+}
+
 section ul {
   margin: 2rem 1rem 0 0;
 }
