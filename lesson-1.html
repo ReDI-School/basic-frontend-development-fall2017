@@ -31,8 +31,9 @@
   <h1>Introduction &amp; Questions</h1>
   <ul>
     <li>What is your <strong>Name</strong>?</li>
+    <li>For how long are you <strong>in Berlin</strong>?</li>
     <li>What is your <strong>experience with HTML &amp; CSS</strong>?</li>
-    <li>What are your <strong>expectations</strong> from learning JavaScript?</li>
+    <li>What are your <strong>expectations</strong> from this course?</li>
   </ul>
 </section>
 
@@ -40,14 +41,14 @@
   <h1>Rules of this class</h1>
   <ol>
     <li>You have to bring Coca-Cola and chips if you didn't make your homework.</li>
-    <li>Arriving more than 10 minutes after 19:00 is considered being late.</li>
-    <li>Arriving more than 30 minutes after 19:00 is considered absent.</li>
-    <li>If you can't make it to a class, notify us in Slack.</li>
+    <li>Arriving more than 10 minutes after 19:00 is considered being late. <br>Arriving more than 30 minutes after 19:00 is considered absent.</li>
     <li>Be Respectful all the time.</li>
-    <li>Speaking in the class is OK, as long it's related to the topic<./li>
+    <li>Speaking in the class is OK, as long it's related to the topic</li>
     <li>Using your phone is only allowed in emergency situations.</li>
     <li>No repetition for people missing half of the classes.</li>
   <ol>
+
+  <p><em>If you can't make it to a class, notify us in Slack.</em></p>
 </section>
 
 <section>
@@ -186,6 +187,194 @@
   <p>Write down two ideas for <strong>simple</strong> webservices, that we could develop in the course of this semester.</p>
   <p><strong>Remember: who doesn't complete the homework, needs to buy chips and cola!</strong></p>
 </section>
+
+<section>
+  <h1>Homework and attendance control</h1>
+  <p>Please read two ideas.</p>
+</section>
+
+<section>
+  <h1>What is JavaScript and what is it used for?</h1>
+  <ul>
+    <li>Scripting language</li>
+    <li>Interaction in the browser</li>
+    <li>Behaviour of websites, based on calculations</li>
+    <li>Works locally in the browser - everyone can see the code</li>
+  </ul>
+  <p>HTML is the structure and content of a website, CSS is the design of the website, JavaScript is the behaviour of the website</p>
+</section>
+
+<section>
+  <h1>What is JavaScript and what is it used for?</h1>
+  <p>You can create a whole website or application in JavaScript. This is called a Single Page Application (SPA).</p>
+  <p><a href="http://wakeup.isadoradigitalagency.com/"><img src="lesson-1/img/spa.png"></a></p>
+</section>
+
+<section>
+  <h1>JavaScript versions</h1>
+  <p>JavaScript is an implementation of the ECMAScript standard</p>
+  <p>The most broadly used version is ECMAScript 5 (ES5). But there is a new version every year.</p>
+  <p>The current version is ECMAScript 2017, it is the 8th version.</p>
+  <table>
+    <tr>
+      <th>ES5</th>
+      <th>ES2017</th>
+    </tr>
+    <tr>
+      <td><code>var i = 1;</code></td>
+      <td><code>let i = 1;</code></td>
+    </tr>
+  </table>
+  <p>ECMAScript is backwards compaitble. ES5 code works in ES2017!</p>
+</section>
+
+<section>
+  <h1>What JavaScript can do</h1>
+  <p>Manipulate the DOM (Document Object Model). <br>
+    That means it can manipulate the HTML of a page.</p>
+
+  <p>Add the following code to your script.js from yesterday:</p>
+  <xmp>
+    window.onload = function () {
+      document.body.innerHTML = 'I have been injected by JavaScript';
+    };
+  </xmp>
+
+  <p>What happens in the browser?</p>
+</section>
+
+<section>
+  <h1>What JavaScript can do</h1>
+  <p>Manipulate styles and stylesheets.</p>
+  <p>Add the following code to your onload function:</p>
+
+  <xmp>
+    document.body.style.backgroundColor = '#cccccc';
+  </xmp>
+</section>
+
+<section>
+  <h1>What JavaScript can do</h1>
+  <p>Take user input and work with it.</p>
+  <p>Change your <code>script.js</code> to the following:</p>
+  <xmp>
+    let age = window.prompt('What is your age?');
+
+    window.onload = function () {
+      document.body.innerHTML = age;
+    };
+  </xmp>
+</section>
+
+<section>
+  <h1>Ways to use JavaScript in HTML</h1>
+
+  <p>(1) Include an external file using a script element <code>&lt;script src="filename.js"&gt;&lt;/script&gt;</code></p>
+  <p>(2) Write your code directly into a script element: <br>
+    <code>&lt;script&gt;window.alert('Not recommended, but can be useful.');&lt;/script&gt;</code>
+  </p>
+  <p>
+    (3) Use JavaScript directly within HTML elements:<br>
+    <code>&lt;button onclick="window.alert('Never use it!');"&gt;&lt;/button&gt;</code>
+  </p>
+
+  <p>We will always use the first method in this class.</p>
+</section>
+
+<section>
+  <h1>Coding with GIT</h1>
+  <p>If you want to see your changes in the browser, you have to save the files.</p>
+  <p>But what, if you want to test something, without losing a working state?<br>
+  Git helps: You can <strong>commit</strong> stable states to your git, and you will always be able to return to this state.</p>
+  <p>Commit your work now in the Terminal:</p>
+  <ol>
+    <li>Navigate to the folder <code>cd ~/REDIBFD/my-first-javascript</code></li>
+    <li>Add all files to the following commit (this is called stage): <code>git add .</code></li>
+    <li>Commit the state to your repository using a message: <code>git commit -m "First steps in JavaScript"</code>
+  </ol>
+</section>
+
+<section>
+  <h1>JavaScript data types</h1>
+  <p>There are six primitive data types in JavaScript: <br>
+    boolean, number, string, symbol, undefined and null.</p>
+  <p>Guess, which data type the following values have:</p>
+  <p><code>1</code><br> <code>"Richard"</code><br> <code>42</code><br> <code>true</code><br> <code>Symbol('a')</code><br> <code>null</code><br> <code>0</code><br> <code>'number'</code><br>
+    <code>'13.3'</code><br> <code>13.3</code><br> <code>undefined</code><br> <code>1 == 2</code><br> <code>'1' === 1</code><br></p>
+
+</section>
+
+<section>
+  <h1>Fun with variables (1)</h1>
+  <p>A variable is defined using <code>let</code> and a descriptive name. The single equal sign (<code>=</code>) assigns a value to the variable.</p>
+  <p><code>let name = 'Darth Vader';</code></p>
+  <p><code>let age = 50;</code></p>
+  <p><code>let isJedi = false;</code></p>
+  <p><code>let isSith = true;</code></p>
+  <p><code>let friends = null;</code></p>
+  <p><code>let father;</code></p>
+
+</section>
+
+<section>
+  <h1>Fun with variables (2)</h1>
+  <p>Change your <code>script.js</code> to the following:</p>
+  <xmp>
+    let myAge = 36;
+    let teacherAge = 36;
+    let average = (myAge + teacherAge) / 2;
+
+    window.alert('Our average age is ' + average);
+  </xmp>
+</section>
+
+
+<section>
+  <h1>Fortuneteller as a Service</h1>
+  <xmp>
+    let a = window.prompt('Think of a person, write her or his name:');
+    let b = window.prompt('What is your name?');
+
+    window.alert(a + ' and ' + b + ' are best friends forever!');
+  </xmp>
+</section>
+
+<section>
+  <h1>It's quiz time</h1>
+  <p>
+    <code>let a = 1 + 1;</code><br>
+    <code>let b = 0 - 1;</code><br>
+    <code>let c = 1 * 2;</code><br>
+    <code>let d = 15 / 2;</code><br>
+    <code>let e = '12' + '5';</code><br>
+    <code>let f = true;</code><br>
+    <code>b += 1;</code><br>
+    <code>c *= 2;</code><br>
+    <code>d /= 2.5;</code><br>
+    <code>let g = 5 % 3;</code><br>
+    <code>g %= 2;</code
+  </p>
+</section>
+
+<section>
+  <h1>What's wrong?</h1>
+  <p><code>let a == 1;</code></p>
+  <p><code>a =+ 1;</code></p>
+  <p><code>let b = '11'</code></p>
+  <p><code>var c = b;</code></p>
+</section>
+
+<section>
+  <h1>Homework</h1>
+  <p>Write a mini calculator that adds two given numbers.</p>
+  <p>Use <code>window.prompt()</code> to get the numbers and <code>window.alert()</code> to output the sum.</p>
+
+  <p>Ask questions about the homework in Slack<br>
+  If you don't do the homework, bring cola and chips.</p>
+
+</section>
+
+
 
   </body>
 </html>
