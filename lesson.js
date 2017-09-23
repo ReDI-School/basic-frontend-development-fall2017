@@ -20,16 +20,15 @@ document.addEventListener("DOMContentLoaded", function() {
     window.location.hash = "#slide-" + next
   }
 
-  document.onkeypress = function(event) {
+  document.onkeydown = function(event) {
     if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
       return
     }
 
-    if (event.key == 'ArrowLeft') {
-      changeSlideBy(-1)
-    }
-    if (event.key == 'ArrowRight') {
-      changeSlideBy(1)
+    changeSlideBy(1)
+
+    if (event.keyCode == '37') {
+      changeSlideBy(-2)
     }
   }
 })
