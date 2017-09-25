@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   document.onkeydown = function(event) {
-    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.keyCode == '27' || event.keyCode == '32') {
       return
     }
 

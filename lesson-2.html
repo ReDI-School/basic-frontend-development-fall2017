@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Lesson 2 - BWD - ReDI</title>
+    <link rel="stylesheet" href="lesson.css">
+    <script src="lesson.js"></script>
+  </head>
+  <body>
+
+    <section class="first">
+      <h1>Basic Frontend Development | JavaScript <strong>ReDI School of Digital Integration</strong></h1>
+      <p>Welcome back to week two of the BWD course!</p>
+      <p>How is everyone doing?</p>
+    </section>
+
+    <section>
+      <h1>Lesson Goals</h1>
+      <p>Revising the basic javascript learn last lesson.</p>
+      <p>Learn about the inspector</p>
+      <p>String methods</p>
+      <p>Arrays and array methods</p>
+      <p>Logical operators</p>
+      <p>Conditions</p>
+    </section>
+
+    <section>
+      <h1>Attendence tracking</h1>
+    </section>
+
+    <section>
+      <h1>Homework Check!!!</h1>
+      <p>Did you manage to make a "mini calculator that adds two given numbers."</p>
+      <p>What problems did you face in the process?</p>
+    </section>
+
+    <section>
+      <h1>Warm Up Quiz - User Input</h1>
+      <p>What line of code do we have to type to get user input?</p>
+    </section>
+
+    <section>
+      <h1>Warm Up Quiz - User Input</h1>
+      <p>What line of code do we have to type to get user input?</p>
+      <xmp>let [variableName] = window.prompt('[message]');</xmp>
+    </section>
+
+    <section>
+      <h1>Warm Up Quiz - User Input</h1>
+      <p>What line of code do we have to type to get user input?</p>
+      <xmp>let [variableName] = window.prompt('[message]');</xmp>
+      <xmp>let a = window.prompt('What is your name?');</xmp>
+    </section>
+
+    <section>
+      <h1>Warm Up Quiz - Data Types</h1>
+      <p><code>"Marc"</code><br> <code>42</code><br> <code>undefined</code><br> <code>true</code><br> <code>Symbol('x')</code><br> <code>'1' === 1</code><br> <code>null</code><br> <code>'number'</code><br>
+        <code>'3.14'</code><br> <code>3.1415</code><br> <code>('3' === 3) == (15 == 16)</code><br> <code>(1 == 2) == ('1' === 1) == ((5 % 2) == 2)</code><br> </p>
+    </section>
+
+    <section>
+      <h1>Warm Up Quiz - Math</h1>
+      <p>
+        <code>let a = 1 % 1;</code><br>
+        <code>let b = 3 - 5;</code><br>
+        <code>let c = 2.5 * 3;</code><br>
+        <code>let d = 15 / 2;</code><br>
+        <code>let e = '12' + '0';</code><br>
+        <code>b ++;</code><br>
+        <code>b --;</code><br>
+        <code>c *= 4;</code><br>
+        <code>d /= 3;</code><br>
+        <code>let g = 21 % 8;</code><br>
+        <code>(d *= 12) == c</code><br>
+        <code>let h = ((g *= 5) == c)</code><br>
+        <code>(c *= 4) == e</code><br>
+        <code>c === e</code><br>
+        <code>(c *= 4) == e</code><br>
+      </p>
+    </section>
+
+    <section>
+      <h1>Reminder attendence tracking</h1>
+    </section>
+
+    <section>
+      <h1>Web Inspector</h1>
+      <p>Tool for developers like us</p>
+      <p>Pretty much every browser has one</p>
+      <p>View the html &amp; css of (most) webpages</p>
+      <p>Find errors in the code via the console.</p>
+      <p><code>rightclick > "inspect"</code></p>
+      <p><img src="lesson-2/inspect.png" style="width: 400px; border: 1px solid #ccc"></p>
+    </section>
+
+    <section>
+      <h1>Chrome Inspector</h1>
+      <p><img src="lesson-2/inspector.png"></p>
+    </section>
+
+    <section>
+      <h1>Firefox Inspector</h1>
+      <p><img src="lesson-2/inspectorFF.png"></p>
+    </section>
+
+    <section>
+      <h1>Console Errors - Missing Resource</h1>
+      <p><img src="lesson-2/errorImg.png"></p>
+    </section>
+
+    <section>
+      <h1>Console Errors - Error in Code</h1>
+      <p><img src="lesson-2/errorImg2.png"></p>
+    </section>
+
+    <section>
+      <h1>console.log</h1>
+      <p>A way to check for errors</p>
+      <p>Another way to check if math works out, or to output a variable for developers to see</p>
+      <p><code>console.log('[message]')</code></p>
+      <p><code>console.log([variableName])</code></p>
+    </section>
+
+    <section>
+      <h1>Find the Bug!</h1>
+      <p>Name of the game explains everything ;)</p>
+      <p>Try finding all bugs (use the inspector for help)! Lets start simple:</p>
+      <p>Change your <code>script.js</code> to the following:</p>
+<xmp>
+window.onload = function () {
+
+  let name = window.prompt('What is your name?');
+  let favorite Food = document.prompt('What is your favorite' food?')
+  document.body.innerHTML = 'My name is ' + name + 'and my favorite
+  food is ' favoriteFood;
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>Find the Bug!</h1>
+      <p>Change your <code>script.js</code> to the following:</p>
+<xmp>
+html.onload = function () {
+
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth()+1
+  let yyyy = today.getFullYear();
+
+  today = dd + ' / ' + mm + ' / ' + yyyy;
+  document.body.innerHTML = tody;
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>String Methods</h1>
+      <p>Used to manipulate strings</p>
+      <p>
+        <code>charAt()</code><br>
+        <code>search()</code><br>
+        <code>slice()</code><br>
+        <code>split()</code><br>
+        <code>substr()</code><br>
+        <code>toLowerCase()</code><br>
+        <code>toUpperCase()</code><br>
+      </p>
+    </section>
+
+    <section>
+      <h1>Let Try!</h1>
+      <p>Add the following to the body of your <code>index.html</code>:</p>
+<xmp>
+<p id="upr"></p>
+<p id="res"></p>
+<p id="uprRes"></p>
+
+</xmp>
+      <p>Change your <code>script.js</code> to the following:</p>
+<xmp>
+html.onload = function () {
+
+  let str = window.prompt('What is your name?');
+  let upr = str.toUpperCase();
+  let res = str.substr(2, 4);
+  let uprRes = upr.substr(2, 4);
+  document.getElementById('upr').innerHTML = upr;
+  document.getElementById('res').innerHTML = res;
+  document.getElementById('uprRes').innerHTML = uprRes;
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>Arrays</h1>
+      <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+      <p>Example:</p>
+      <p>
+        <code>let cars = ["Tesla", "Volkswagen", "Audi"];</code><br>
+        <code>let cities = ["Berlin", "London", "Paris"];</code><br>
+        <code>let brand = cars[0];</code><br>
+      </p>
+    </section>
+
+    <section>
+    <h1>Let Try!</h1>
+    <p>Change your <code>script.js</code> to the following:</p>
+<xmp>
+html.onload = function () {
+
+  let a = window.prompt('What is your name?');
+  let b = window.prompt('How old are you?');
+  let c = window.prompt('What is your favorite food?');
+  let array = [a,b,c];
+  document.body.innerHTML = array[0] + ', ' + array[1] + ', ' + array[2];
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>String Methods</h1>
+      <p style="color: #ccc">
+        <code>charAt()</code><br>
+        <code>search()</code><br>
+        <code>slice()</code><br>
+        <code style="color: #5CADC5">split()</code><br>
+        <code>substr()</code><br>
+        <code>toLowerCase()</code><br>
+        <code>toUpperCase()</code><br>
+      </p>
+    </section>
+
+    <section>
+    <h1>Split Strings</h1>
+    <p>Change your <code>script.js</code> to the following:</p>
+<xmp>
+html.onload = function () {
+
+  let sentence = window.prompt('Type a sentance.');
+  let array = sentence.split(' ');
+  document.body.innerHTML = array[0] + ', ' + array[1] + ', ' + array[2];
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>Array Methods</h1>
+      <p>Used to manipulate arrays</p>
+      <p>
+        <code>toString()</code><br>
+        <code>join()</code><br>
+        <code>pop()</code><br>
+        <code>push()</code><br>
+      </p>
+    </section>
+
+    <section>
+      <h1>Logical Operators</h1>
+      <p>Compare and contrasting variables</p>
+      <p>Example: <code>(true != false)</code></p>
+      <p>
+        <code>(5 || 10) == (20 / 2)</code><br>
+        <code>7 <= (18 / 2)</code><br>
+      </p>
+    </section>
+
+    <section>
+      <h1>Name the operators</h1>
+      <p>
+        <code>==</code><br>
+        <code>&&</code><br>
+        <code>||</code><br>
+        <code>===</code><br>
+        <code><</code><br>
+        <code>></code><br>
+        <code><=</code><br>
+        <code>>=</code><br>
+        <code>!</code><br>
+      </p>
+    </section>
+
+  </body>
+</html>
