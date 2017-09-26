@@ -229,8 +229,8 @@ window.onload = function () {
       <p>JavaScript arrays are used to store multiple values in a single variable.</p>
       <p>Example:</p>
       <p>
-        <code>let cars = ["Tesla", "Volkswagen", "Audi"];</code><br>
-        <code>let cities = ["Berlin", "London", "Paris"];</code><br>
+        <code>let cars = ['Tesla', 'Volkswagen', 'Audi'];</code><br>
+        <code>let cities = ['Berlin', 'London', 'Paris'];</code><br>
         <code>let brand = cars[0];</code><br>
       </p>
     </section>
@@ -249,6 +249,15 @@ window.onload = function () {
 
 };
 </xmp>
+    </section>
+
+    <section>
+      <h1>More Arrays</h1>
+      <p>Something you can also do:</p>
+      <p>
+        <code>let cars = ['Tesla', 'Volkswagen', 'Audi'];</code><br>
+        <code>cars[1] = 'Porsche';</code><br>
+      </p>
     </section>
 
     <section>
@@ -286,6 +295,33 @@ window.onload = function () {
         <code>join()</code><br>
         <code>pop()</code><br>
         <code>push()</code><br>
+        <code>slice()</code><br>
+        <code>length</code><br>
+      </p>
+    </section>
+
+    <section>
+    <h1>Array Methods</h1>
+    <p>In your <code>script.js</code> remove:</p>
+    <p><code>document.body.innerHTML = array[0] + ', ' + array[1] + ', ' + array[2];</code></p>
+    <p>In its place, add:</p>
+<xmp>
+let arrayPop = array.pop();
+let arrayPush = array.push('testObject');
+let arraySlice = array.slice(1,4);
+let output = array.toString() + '<br>' + array.join() + '<br>' + arrayPop + '<br>' + arrayPush + '<br>' + arraySlice;
+document.body.innerHTML = output;
+</xmp>
+    </section>
+
+    <section>
+      <h1>Objects</h1>
+      <p>Arrays on crack</p>
+      <p>Example:</p>
+      <p>
+        <code>let car = {type:"Tesla", model:"Model S", color:"black"};</code><br>
+        <code>let type = car.type;</code><br>
+        <code>let model = car['model'];</code><br>
       </p>
     </section>
 
@@ -312,6 +348,178 @@ window.onload = function () {
         <code>>=</code><br>
         <code>!</code><br>
       </p>
+    </section>
+
+    <section>
+      <h1>Conditions</h1>
+      <p>If this, then that!</p>
+      <p>Example:</p>
+<xmp>
+let a = 5;
+let b = 10;
+if(a >= b) {
+  alert('Sometheing went wrong!');
+} else {
+  alert('Maths is great!');
+}
+</xmp>
+    </section>
+
+    <section>
+      <h1>Conditions</h1>
+      <p>These are the conditions that you need to know!</p>
+      <p>
+        <code>if( [...] ){ [...] }</code><br>
+        <code>else{ [...] }</code><br>
+        <code>else if( [...] ){ [...] }</code><br>
+      </p>
+<xmp>
+switch( [...] ) {
+    case n:
+        [...]
+        break;
+    case n:
+        [...]
+        break;
+    default:
+        [...]
+}
+</xmp>
+    </section>
+
+    <section>
+      <h1>Let make conditions</h1>
+      <p>Change your <code>script.js</code> to the following:</p>
+<xmp>
+window.onload = function () {
+
+  let today = new Date();
+  let mm = today.getMonth()+1;
+  let message = '';
+
+  if(mm >= 3 && mm <= 5) {
+    message = 'spring';
+  } else if(mm >= 6 && mm <= 8) {
+    message = 'summer';
+  } else if(mm >= 9 && mm <= 11) {
+    message = 'fall';
+  } else if (mm <= 2 || mm == 12){
+    message = 'winter';
+  } else {
+    message = '(something has gone wrong!)';
+  }
+
+  document.body.innerHTML = 'It is currently ' + message;
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>Check it works</h1>
+      <p>Adapt your <code>script.js</code> to the following:</p>
+<xmp>
+window.onload = function () {
+
+  let mm = window.prompt('Give number of a month (1 - 12)');
+  let message = '';
+
+  if(mm >= 3 && mm <= 5) {
+    message = 'spring';
+  } else if(mm >= 6 && mm <= 8) {
+    message = 'summer';
+  } else if(mm >= 9 && mm <= 11) {
+    message = 'fall';
+  } else if (mm <= 2 || mm == 12){
+    message = 'winter';
+  } else {
+    message = '(something has gone wrong!)';
+  }
+
+  document.body.innerHTML = 'It is currently ' + message;
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>Loops</h1>
+      <p>Loops are handy, if you want to run the same code over and over again!</p>
+      <p>Instead of:</p>
+<xmp>
+text += cars[0] + "<br>";
+text += cars[1] + "<br>";
+text += cars[2] + "<br>";
+text += cars[3] + "<br>";
+text += cars[4] + "<br>";
+text += cars[5] + "<br>";
+</xmp>
+      <p>We can write:</p>
+<xmp>
+for (i = 0; i < cars.length; i++) {
+    text += cars[i] + "<br>";
+}
+</xmp>
+    </section>
+
+    <section>
+      <h1>Types of loops</h1>
+      <p>
+        <code>for</code><br>
+        <code>for/in</code><br>
+        <code>while</code><br>
+        <code>do/while</code><br>
+      </p>
+    </section>
+
+    <section>
+      <h1>For Loops</h1>
+<xmp>
+for (let i = 0; i < [number]; i++) {
+  [...]
+}
+</xmp>
+      <p>Example:</p>
+<xmp>
+for (let i = 0; i < [number]; i++) {
+  [...]
+}
+</xmp>
+    </section>
+
+    <section>
+      <h1>Trying for loops</h1>
+      <p>Change your <code>script.js</code> to the following:</p>
+<xmp>
+window.onload = function () {
+
+  let name = window.prompt('Whats your name?');
+  let number = window.prompt('Set a number (not too big!)');
+  let message = '';
+
+  for(let i = 0; i < number; i++) {
+    message += name + '<br>';
+  }
+
+  document.body.innerHTML = message;
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>For/In Loops</h1>
+      <p>Special case of for loop for objects</p>
+      <p>Example:</p>
+<xmp>
+let person = {fname:'Elon', lname:'Musk', age:25}; 
+
+let text = '';
+let x;
+for (x in person) {
+    text += person[x];
+}
+</xmp>
     </section>
 
   </body>
