@@ -275,16 +275,10 @@ window.onload = function () {
 
     <section>
     <h1>Split Strings</h1>
-    <p>Change your <code>script.js</code> to the following:</p>
-<xmp>
-window.onload = function () {
-
-  let sentence = window.prompt('Type a sentance.');
-  let array = sentence.split(' ');
-  document.body.innerHTML = array[0] + ', ' + array[1] + ', ' + array[2];
-
-};
-</xmp>
+    <p>
+        <code>let cars = ['Tesla', 'Volkswagen', 'Audi'];</code><br>
+        <code>let array = cars.split();</code><br>
+      </p>
     </section>
 
     <section>
@@ -292,12 +286,29 @@ window.onload = function () {
       <p>Used to manipulate arrays</p>
       <p>
         <code>toString()</code><br>
-        <code>join()</code><br>
+        <code>join('+')</code><br>
         <code>pop()</code><br>
-        <code>push()</code><br>
-        <code>slice()</code><br>
+        <code>push('x')</code><br>
+        <code>slice(x, y)</code><br>
         <code>length</code><br>
       </p>
+    </section>
+
+    <section>
+    <h1>length</h1>
+<xmp>
+window.onload = function () {
+
+  let sentence = window.prompt('Type a sentance.');
+  let array = sentence.split(' ');
+  let arrayPop = array.pop();
+  let arrayPush = array.push('testObject');
+  let arraySlice = array.slice(1,4);
+  let output = array.toString() + '<br>' + array.join() + '<br>' + arrayPop + '<br>' + arrayPush + '<br>' + arraySlice;
+  document.body.innerHTML = output;
+
+};
+</xmp>
     </section>
 
     <section>
@@ -443,83 +454,10 @@ window.onload = function () {
     </section>
 
     <section>
-      <h1>Loops</h1>
-      <p>Loops are handy, if you want to run the same code over and over again!</p>
-      <p>Instead of:</p>
-<xmp>
-text += cars[0] + "<br>";
-text += cars[1] + "<br>";
-text += cars[2] + "<br>";
-text += cars[3] + "<br>";
-text += cars[4] + "<br>";
-text += cars[5] + "<br>";
-</xmp>
-      <p>We can write:</p>
-<xmp>
-for (i = 0; i < cars.length; i++) {
-    text += cars[i] + "<br>";
-}
-</xmp>
-    </section>
-
-    <section>
-      <h1>Types of loops</h1>
-      <p>
-        <code>for</code><br>
-        <code>for/in</code><br>
-        <code>while</code><br>
-        <code>do/while</code><br>
-      </p>
-    </section>
-
-    <section>
-      <h1>For Loops</h1>
-<xmp>
-for (let i = 0; i < [number]; i++) {
-  [...]
-}
-</xmp>
-      <p>Example:</p>
-<xmp>
-for (let i = 0; i < [number]; i++) {
-  [...]
-}
-</xmp>
-    </section>
-
-    <section>
-      <h1>Trying for loops</h1>
-      <p>Change your <code>script.js</code> to the following:</p>
-<xmp>
-window.onload = function () {
-
-  let name = window.prompt('Whats your name?');
-  let number = window.prompt('Set a number (not too big!)');
-  let message = '';
-
-  for(let i = 0; i < number; i++) {
-    message += name + '<br>';
-  }
-
-  document.body.innerHTML = message;
-
-};
-</xmp>
-    </section>
-
-    <section>
-      <h1>For/In Loops</h1>
-      <p>Special case of for loop for objects</p>
-      <p>Example:</p>
-<xmp>
-let person = {fname:'Elon', lname:'Musk', age:25}; 
-
-let text = '';
-let x;
-for (x in person) {
-    text += person[x];
-}
-</xmp>
+      <h1>Homework</h1>
+      <p>Write a program that shows the current day in the body.</p>
+      <p>Example: "Today is a Thursday"</p>
+      <p>If you can, use switch!</p>
     </section>
 
   </body>
