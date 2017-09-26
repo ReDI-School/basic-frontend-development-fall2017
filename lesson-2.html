@@ -138,6 +138,19 @@ window.onload = function () {
     </section>
 
     <section>
+      <h1>Solution</h1>
+<xmp>
+window.onload = function () {
+
+  let name = window.prompt('What is your name?');
+  let favoriteFood = window.prompt('What is your favorite food?');
+  document.body.innerHTML = 'My name is ' + name + ' and my favorite food is ' + favoriteFood;
+
+};
+</xmp>
+    </section>
+
+    <section>
       <h1>Find the Bug!</h1>
       <p>Change your <code>script.js</code> to the following:</p>
 <xmp>
@@ -145,11 +158,28 @@ html.onload = function () {
 
   let today = new Date();
   let dd = today.getDate();
-  let mm = today.getMonth()+1
+  let m m = today.getMonth()+1
+  let yyyy = getFullYear();
+
+  today = dd + ' / ' + mm + ' / ' + yyy;
+  document.body.inner html = tody;
+
+};
+</xmp>
+    </section>
+
+    <section>
+      <h1>Solution</h1>
+<xmp>
+window.onload = function () {
+
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth()+1;
   let yyyy = today.getFullYear();
 
   today = dd + ' / ' + mm + ' / ' + yyyy;
-  document.body.innerHTML = tody;
+  document.body.innerHTML = today;
 
 };
 </xmp>
@@ -180,7 +210,7 @@ html.onload = function () {
 </xmp>
       <p>Change your <code>script.js</code> to the following:</p>
 <xmp>
-html.onload = function () {
+window.onload = function () {
 
   let str = window.prompt('What is your name?');
   let upr = str.toUpperCase();
@@ -209,7 +239,7 @@ html.onload = function () {
     <h1>Let Try!</h1>
     <p>Change your <code>script.js</code> to the following:</p>
 <xmp>
-html.onload = function () {
+window.onload = function () {
 
   let a = window.prompt('What is your name?');
   let b = window.prompt('How old are you?');
@@ -238,7 +268,7 @@ html.onload = function () {
     <h1>Split Strings</h1>
     <p>Change your <code>script.js</code> to the following:</p>
 <xmp>
-html.onload = function () {
+window.onload = function () {
 
   let sentence = window.prompt('Type a sentance.');
   let array = sentence.split(' ');
