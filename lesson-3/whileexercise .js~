@@ -1,0 +1,11 @@
+
+window.onload = function () {
+  let quizAnswer = window.prompt("Which party got the most votes in the recent election in Germany?");
+  let correctAnswer = false;
+  while(correctAnswer != true){
+    if(quizAnswer === "CDU"){
+      correctAnswer = true;
+    }
+  }
+  window.alert("You are correct!")
+}

@@ -1,0 +1,9 @@
+
+window.onload = function () {
+  let quizAnswer = window.prompt("Which party got the most votes in the recent election in Germany?")
+  if(quizAnswer === "CDU"){
+    window.alert("You are correct!")
+  }else{
+    window.alert("You are wrong!");
+  }
+}
